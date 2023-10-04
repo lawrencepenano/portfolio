@@ -20,7 +20,7 @@ const NavModal = ({
     const [showModal, setShowModal] = useState(false);
     const [activeSection, setActiveSection] = useState("")
     const delayedClosingOfModal =  async () => {
-        setShowModal(!showModal)
+        setShowModal(false)
         const delay = 500;
         const timer = await setTimeout(() => {
            togglePopover()
@@ -29,7 +29,7 @@ const NavModal = ({
     }
 
     useEffect(()=>{
-        setShowModal(!showModal)
+        setShowModal(true)
     },[])
 
     useEffect(()=>{
@@ -39,9 +39,24 @@ const NavModal = ({
         const section = fragment.slice(1);
         setActiveSection(section || "about")
     },[])  
+
+    useEffect(() => {
+       const  handleOutsideClick = async (event: MouseEvent) => {
+        if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+            // Click occurred outside the modal content
+            delayedClosingOfModal()
+        }
+        }
+    
+        document.addEventListener('click', handleOutsideClick);
+    
+        return () => {
+          document.removeEventListener('click', handleOutsideClick);
+        };
+      }, []);
     
   return (
-    <div className="fixed bottom-0 right-0 flex items-center justify-end bg-gray-900 bg-opacity-50 z-30 w-full ">
+    <div className="fixed bottom-0 right-0 flex items-center justify-end bg-gray-900 bg-opacity-50 z-50 w-full ">
         <div ref={modalRef} className={
                 classNames(
                     "w-80 transform transition-transform h-screen bg-secondary duration-500",

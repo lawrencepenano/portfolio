@@ -110,10 +110,10 @@ const Header = () => {
                         "border-l-2 border-primary/80 pl-3 ml-2 flex items-center"
                         )
                     }>
-                        <button className='mx-2 'type='button' onClick={handleChangeTheme}> { theme === "dark" ?  <FaSun className="text-xl "/> :  <FaMoon className="text-xl"/>} </button>
-                        <Link className='mx-2' type='button' href="https://www.facebook.com/ksetrmvr.penano/" target='_blank'>  <FaFacebook className="text-xl"/></Link>
-                        <Link className='mx-2' type='button' href="https://www.linkedin.com/in/lawrence-penano-cpa-4b4205193/" target='_blank'> <FaLinkedin className="text-xl"/></Link>
-                        <Link className='mx-2' type='button' href="mailto:lawrence.olegario.penano@gmail.com" target='_blank'> <FaRegEnvelope className="text-xl"/></Link>
+                        <button className='mx-2 'type='button' onClick={handleChangeTheme}> { theme === "dark" ?  <FaSun className="text-xl "/> :  <FaMoon className='text-xl'/>} </button>
+                        <Link className='mx-2' type='button' href='https://www.facebook.com/ksetrmvr.penano/' target='_blank'>  <FaFacebook className='text-xl'/></Link>
+                        <Link className='mx-2' type='button' href='https://www.linkedin.com/in/lawrence-penano-cpa-4b4205193/' target='_blank'> <FaLinkedin className='text-xl'/></Link>
+                        <Link className='mx-2' type='button' href='mailto:"lawrence.olegario.penano@gmail.com"' target='_blank'> <FaRegEnvelope className='text-xl'/></Link>
                     </div>
                 </div>
                 

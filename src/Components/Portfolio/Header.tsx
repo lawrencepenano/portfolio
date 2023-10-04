@@ -12,7 +12,7 @@ const navLinks = [
     "about",
     "experience",
     "frontend",
-    // "backend"
+    "backend"
 ]
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -123,7 +123,7 @@ const Header = () => {
                     <button className='mx-2 'type='button' onClick={handleChangeTheme}> { theme === "dark" ?  <FaSun className="text-xl "/> :  <FaMoon className="text-xl"/>} </button>
                     <Link className='mx-2' type='button' href="https://www.facebook.com/ksetrmvr.penano/" target='_blank'>  <FaFacebook className="text-xl"/></Link>
                     <Link className='mx-2' type='button' href="https://www.linkedin.com/in/lawrence-penano-cpa-4b4205193/" target='_blank'> <FaLinkedin className="text-xl"/></Link>
-                    <Link className='mx-2' type='button' href="mailto:lawrence.olegario.penano@gmail.com" target='_blank'> <FaRegEnvelope className="text-xl"/></Link>
+                    <Link className='mx-2' type='button' href='mailto:lawrence.olegario.penano@gmail.com' target='_blank'> <FaRegEnvelope className="text-xl"/></Link>
                 </div>
             </div>
             
